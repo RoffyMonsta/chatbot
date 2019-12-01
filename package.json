@@ -1,0 +1,25 @@
+{
+  "name": "botkit-facebookbot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bot.js",
+  "scripts": {
+    "start": "node bot.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "botbuilder-adapter-facebook": "^1.0.6",
+    "botbuilder-storage-mongodb": "^0.9.5",
+    "botkit": "^4.6.0",
+    "botkit-plugin-cms": "^1.0.3",
+    "dotenv": "^7.0.0",
+    "ejs": "^2.7.4",
+    "mongodb": "^3.3.4",
+    "ngrok": "^3.2.5",
+    "winston": "^3.2.1"
+  },
+  "devDependencies": {
+    "eslint": "^6.7.1"
+  }
+}
