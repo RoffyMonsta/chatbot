@@ -11,17 +11,19 @@ const logger = log.createLogger({
     level: 'info',
     format: log.format.json(),
     transports: [
-      new log.transports.Console(),
-      new log.transports.File({ filename: 'logs/bot.log' })
+    new log.transports.Console(),
+    new log.transports.File({ filename: 'logs/bot.log' })
     ]
-  });
+});
 const { Botkit } = require('botkit');
 // Import a platform-specific adapter for facebook.
 const { FacebookAdapter, FacebookEventTypeMiddleware } = require('botbuilder-adapter-facebook');
 const { MongoDbStorage } = require('botbuilder-storage-mongodb');
 // Load process.env values from .env file
 require('dotenv').config();
-// mongo
+// bestbuy api (eslint shows this as eror(saved for later))
+var bby = require('bestbuy')(process.env.BBY_API);
+// mongo (eslint shows this as error(saved for later))
 let storage = null;
 if (process.env.MONGO_URI) {
     const mongoStorage = new MongoDbStorage({
