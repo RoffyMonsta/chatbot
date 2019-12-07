@@ -26,7 +26,6 @@ const adapter = new FacebookAdapter({
     access_token: process.env.FACEBOOK_ACCESS_TOKEN,
     app_secret: process.env.FACEBOOK_APP_SECRET,
 })
-
 // emit events based on the type of facebook event being received
 adapter.use(new FacebookEventTypeMiddleware());
 const controller = new Botkit({
@@ -38,8 +37,7 @@ const controller = new Botkit({
 controller.webserver.get('/', (req, res) => {
     res.send(`This app is running Botkit ${ controller.version }.`);
 });
-// gets postback from server
-
+//loop work for bot
 controller.ready(() => {
     controller.loadModules(__dirname + '/features');
 });

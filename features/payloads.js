@@ -3,9 +3,11 @@
  * Licensed under the MIT License.
  */
 
-
+//export this module
 module.exports = function(controller) {
+    //import winston-logger
     var log = require('../modules/logger');
+    //quick-replies menu buttons
     const quickReply = {
         text: 'Main menu', 
         quick_replies: [
@@ -31,6 +33,7 @@ module.exports = function(controller) {
             }
         ]
     };
+    //get a postback
     controller.on('facebook_postback', async(bot, message) => {
         //when user presses Get Started
         if(message.postback.payload == 'GET_STARTED_PAYLOAD'){
