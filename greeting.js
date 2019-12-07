@@ -1,12 +1,5 @@
 // winston logger
-var log = require('winston');
-const logger = log.createLogger({
-    level: 'info',
-    format: log.format.json(),
-    transports: [
-      new log.transports.File({ filename: 'logs/greeting.log' })
-    ]
-  });
+var log = require('./modules/logger.js');
 //get requiries
 var request = require('request');
 require('dotenv').config();
@@ -59,7 +52,7 @@ var options = {
 };
 function callback(error, response, body) {
     if (!error && response.statusCode == 200) {
-        logger.info(body);
+        log.logger.info(body);
     }
 }
 request(options, callback);
