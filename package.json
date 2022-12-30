@@ -16,7 +16,7 @@
     "botkit-plugin-cms": "^1.0.3",
     "dotenv": "^7.0.0",
     "ejs": "^2.7.4",
-    "mocha": "^6.2.2",
+    "mocha": "^10.2.0",
     "mongodb": "^3.3.4",
     "ngrok": "^3.2.5",
     "should": "^13.2.3",
